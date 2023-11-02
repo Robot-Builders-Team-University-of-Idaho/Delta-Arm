@@ -8,9 +8,12 @@ int startpos = 45;
 float cPos[3];
 float starting_angles[3];
 
+<<<<<<< HEAD
 float time = 0;
 float r = 30;
 
+=======
+>>>>>>> 8cc71c1f1aa978e205888081b732ee4624109bca
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
@@ -27,6 +30,7 @@ void setup() {
   s3.write(-int(starting_angles[2]));
 
   delay(5000);
+<<<<<<< HEAD
   float fPos[3] = {r * cos(time), r * sin(time), 160};
   moveMJT(1000, cPos, fPos, s1, s2, s3);
   delay(1000);
@@ -37,4 +41,22 @@ void loop() {
   move(5, cPos, fPos, s1, s2, s3);
   time += 0.1;
   Serial.println(time);
+=======
+
+}
+
+void loop() {
+  float fPos[3] = {40, 40, 120};
+  moveMJT(200, cPos, fPos, s1, s2, s3);
+
+  float fPos2[3] = {-40, 40, 120};
+  moveMJT(200, cPos, fPos2, s1, s2, s3);
+
+  float fPos3[3] = {-40, -40, 120};
+  moveMJT(200, cPos, fPos3, s1, s2, s3);
+
+  float fPos4[3] = {40, -40, 120};
+  moveMJT(200, cPos, fPos4, s1, s2, s3);
+  // put your main code here, to run repeatedly:
+>>>>>>> 8cc71c1f1aa978e205888081b732ee4624109bca
 }
